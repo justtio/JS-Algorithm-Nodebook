@@ -31,3 +31,21 @@ function minSubArrayLen(target, nums) {
   // Return the minimum length of the subarray
   return minLen === Infinity ? 0 : minLen;
 }
+
+//write some console.log() tests
+console.log(minSubArrayLen(7, [2, 3, 1, 2, 4, 3])); //2
+console.log(minSubArrayLen(4, [1, 4, 4])); //1
+
+function minSubArrayLen(target, nums) {
+  let res = Infinity;
+  let sum = 0;
+  let i = 0;
+  for(let j = 0; j <= nums.length; j++) {
+    sum += nums[j];
+    while(sum >= target) {
+      res = Math.min(res, j - i + 1);
+      sum = sum - nums[i];
+      i++;
+    }
+  }
+}

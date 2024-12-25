@@ -1,4 +1,4 @@
-// 本质上就是判断一个数是否可以携程某个整数的平方
+// 本质上就是判断一个数是否可以写成某个整数的平方
 
 function isPerfectSquare(num) {
   let left = 0;

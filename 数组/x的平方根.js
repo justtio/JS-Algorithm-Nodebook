@@ -13,3 +13,6 @@ function mySqrt(x) {
     }
     return left - 1;
 }
+
+const x = 4;
+mySqrt(x); // Output: 2
